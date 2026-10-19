@@ -17,7 +17,11 @@
   <div class="topbar">
     <div class="container topbar__inner">
       <span>Назарбаев Интеллектуальные школы · Казахстан</span>
-      <span class="topbar__langs">ҚАЗ · РУС · ENG</span>
+      <div class="topbar__langs" id="langSwitcher" role="group" aria-label="Тіл / Язык / Language">
+        <button type="button" class="lang-btn" data-lang="kk" aria-pressed="false">ҚАЗ</button>
+        <button type="button" class="lang-btn is-active" data-lang="ru" aria-pressed="true">РУС</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">ENG</button>
+      </div>
     </div>
   </div>
 
@@ -651,6 +655,9 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+  <script src="i18n.kk.js"></script>
+  <script src="i18n.en.js"></script>
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

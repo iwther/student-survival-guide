@@ -6,6 +6,18 @@
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
+  /* ---------- i18n bridge ---------- */
+  const I18N = window.SSG || {
+    lang: "ru",
+    t: (key) => key,
+    fmt: (key, vars) => {
+      let s = key;
+      if (vars) Object.keys(vars).forEach((k) => { s = s.split("{" + k + "}").join(vars[k]); });
+      return s;
+    },
+    onLangChange: () => {}
+  };
+
   /* ---------- toast ---------- */
   const toastEl = $("#toast");
   let toastTimer;
@@ -101,7 +113,7 @@
   function render() {
     const total = MODES[mode].s;
     timeEl.textContent = fmt(Math.max(0, remaining));
-    labelEl.textContent = MODES[mode].label;
+    labelEl.textContent = I18N.t(MODES[mode].label);
     ringEl.style.strokeDashoffset = RING_LEN * (1 - Math.max(0, remaining) / total);
   }
 
@@ -125,7 +137,7 @@
     clearInterval(interval);
     interval = null;
     endTime = null;
-    startBtn.textContent = "Старт";
+    startBtn.textContent = I18N.t("Старт");
   }
 
   function tick() {
@@ -139,10 +151,13 @@
         rounds = (rounds + 1) % 5;
         renderRounds();
         const next = rounds === 0 ? "long" : "short";
-        toast("Цикл завершён! Дальше — " + MODES[next].label.toLowerCase() + " " + MODES[next].s / 60 + " мин");
+        toast(I18N.fmt("Цикл завершён! Дальше — {mode} {min} мин", {
+          mode: I18N.t(MODES[next].label).toLowerCase(),
+          min: MODES[next].s / 60
+        }));
         setMode(next, false);
       } else {
-        toast("Перерыв окончен — возвращаемся к работе");
+        toast(I18N.t("Перерыв окончен — возвращаемся к работе"));
         setMode("work", false);
       }
       return;
@@ -164,7 +179,7 @@
     if (interval) { stopTimer(); return; }
     endTime = Date.now() + remaining * 1000;
     interval = setInterval(tick, 250);
-    startBtn.textContent = "Пауза";
+    startBtn.textContent = I18N.t("Пауза");
   });
 
   resetBtn.addEventListener("click", () => setMode(mode, false));
@@ -190,6 +205,7 @@
   const breathBtn = $("#breathStart");
 
   let breathing = false;
+  let breathState = "idle";
   let phaseIdx = 0;
   let phaseStart = 0;
   let breathRAF = null;
@@ -199,9 +215,31 @@
     phaseIdx = i;
     phaseStart = Date.now();
     const ph = PHASES[i];
-    breathPhase.textContent = ph.name;
+    breathPhase.textContent = I18N.t(ph.name);
     breathCircle.style.transitionDuration = ph.sec + "s";
     breathCircle.style.transform = "scale(" + ph.scale + ")";
+  }
+
+  function renderBreathUI() {
+    if (breathState === "running") {
+      breathBtn.textContent = I18N.t("Стоп");
+      breathPhase.textContent = I18N.t(PHASES[phaseIdx].name);
+      return;
+    }
+    breathBtn.textContent = I18N.t("Начать");
+    if (breathState === "paused") {
+      breathPhase.textContent = I18N.t("Пауза");
+      breathCount.textContent = I18N.t("Нажми, чтобы продолжить");
+    } else {
+      breathPhase.textContent = I18N.t("Готов?");
+      breathCount.textContent = I18N.t("Нажми старт");
+    }
+  }
+
+  function secondsLabel(n) {
+    if (n === 1) return I18N.t("секунда");
+    if (n > 0 && n < 5) return I18N.t("секунды");
+    return I18N.t("секунд");
   }
 
   function breathLoop() {
@@ -209,7 +247,7 @@
     const ph = PHASES[phaseIdx];
     const elapsed = (Date.now() - phaseStart) / 1000;
     const left = Math.max(0, Math.ceil(ph.sec - elapsed));
-    breathCount.textContent = left + " " + (left === 1 ? "секунда" : left < 5 && left > 0 ? "секунды" : "секунд");
+    breathCount.textContent = left + " " + secondsLabel(left);
 
     if (elapsed >= ph.sec) {
       if (phaseIdx === PHASES.length - 1) {
@@ -226,19 +264,21 @@
   breathBtn.addEventListener("click", () => {
     if (breathing) {
       breathing = false;
+      breathState = "paused";
       cancelAnimationFrame(breathRAF);
-      breathBtn.textContent = "Начать";
-      breathPhase.textContent = "Пауза";
-      breathCount.textContent = "Нажми, чтобы продолжить";
       breathCircle.style.transitionDuration = "0.6s";
       breathCircle.style.transform = "scale(0.55)";
+      renderBreathUI();
       return;
     }
     breathing = true;
-    breathBtn.textContent = "Стоп";
+    breathState = "running";
+    breathBtn.textContent = I18N.t("Стоп");
     setPhase(0);
     breathLoop();
   });
+
+  renderBreathUI();
 
   /* ---------- resource filters ---------- */
   const chips = $$("#resourceFilters .chip");
@@ -284,7 +324,7 @@
         if (cb.checked) done++;
       });
     });
-    overallCount.textContent = done + " из " + total + " пунктов";
+    overallCount.textContent = I18N.fmt("{done} из {total} пунктов", { done: done, total: total });
     overallBar.style.width = total ? (done / total) * 100 + "%" : "0%";
   }
 
@@ -304,7 +344,7 @@
     updateOverall();
 
     if (done === boxes.length) {
-      toast("Чек-лист «" + $("h3", list).textContent + "» выполнен. Так держать!");
+      toast(I18N.fmt("Чек-лист «{name}» выполнен. Так держать!", { name: $("h3", list).textContent }));
     }
   }
 
@@ -321,7 +361,7 @@
     $(".clist__reset", list).addEventListener("click", () => {
       boxes.forEach((b) => { b.checked = false; });
       updateList(list);
-      toast("Чек-лист сброшен");
+      toast(I18N.t("Чек-лист сброшен"));
     });
 
     // initial render (without toast)
@@ -331,6 +371,20 @@
     list.classList.toggle("is-done", done === boxes.length && done > 0);
   });
   updateOverall();
+
+  /* ---------- language change: re-render dynamic labels ---------- */
+  I18N.onLangChange(() => {
+    render();
+    if (interval) startBtn.textContent = I18N.t("Пауза");
+    else startBtn.textContent = I18N.t("Старт");
+    renderBreathUI();
+    lists.forEach((list) => {
+      const boxes = $$('input[type="checkbox"]', list);
+      const done = boxes.filter((b) => b.checked).length;
+      $(".clist__count", list).textContent = done + "/" + boxes.length;
+    });
+    updateOverall();
+  });
 
   /* ---------- faq: закрывать остальные ---------- */
   const faqItems = $$(".faq details");
