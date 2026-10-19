@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Survival Guide — путеводитель ученика НИШ</title>
+  <meta name="description" content="Путеводитель ученика Назарбаевской интеллектуальной школы: СОР и СОЧ, критериальное оценивание, советы по учёбе, тайм-менеджмент, стресс, ЕНТ и КТА, ресурсы и чек-листы.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="scroll-progress"><span id="scrollProgressBar"></span></div>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>Назарбаев Интеллектуальные школы · Казахстан</span>
+      <span class="topbar__langs">ҚАЗ · РУС · ENG</span>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand">
+        <span class="brand__mark">NIS</span>
+        <span class="brand__text">Student Survival Guide</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#study">Учёба</a>
+        <a href="#time">Время</a>
+        <a href="#stress">Стресс</a>
+        <a href="#resources">Ресурсы</a>
+        <a href="#checklists">Чек-листы</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Переключить тему" title="Тема">
+          <svg class="ico ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"/></svg>
+          <svg class="ico ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.2 8.2 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></svg>
+        </button>
+        <button class="icon-btn nav__burger" id="navBurger" aria-label="Меню">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="badge">Казахстан · Путеводитель ученика НИШ</span>
+        <h1 class="hero__title">Student <span>Survival</span> Guide</h1>
+        <p class="hero__subtitle">
+          Гайд для учеников Назарбаевских интеллектуальных школ: как жить с СОР, СОЧ и критериальным
+          оцениванием, успевать на трёх языках, не выгорать и подготовиться к ЕНТ и КТА.
+        </p>
+        <div class="hero__cta">
+          <a href="#study" class="btn btn--primary">Смотреть советы</a>
+          <a href="#checklists" class="btn btn--ghost">К чек-листам</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat"><strong>21</strong><span>совет по учёбе, времени и стрессу</span></div>
+          <div class="stat"><strong>2</strong><span>интерактивных инструмента</span></div>
+          <div class="stat"><strong>14</strong><span>ресурсов: НИШ, ЕНТ, курсы</span></div>
+          <div class="stat"><strong>4</strong><span>чек-листа с прогрессом</span></div>
+        </div>
+      </div>
+      <div class="hero__glow" aria-hidden="true"></div>
+    </section>
+
+    <!-- STUDY -->
+    <section class="section" id="study">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Блок 1</span>
+          <h2>Советы по учёбе</h2>
+          <p>Не «учись усерднее», а «учись умнее» — с учётом того, что в НИШ критерии открыты, часть предметов на английском, а СОР и СОЧ приходят по расписанию.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__num">01</div>
+            <h3>Читай критерии до начала работы</h3>
+            <p>Получил задание на СОР — первым делом открой <strong>критерии и дескрипторы</strong>. Ты увидишь, за что снимают баллы и как выглядит высокий уровень. Работа «на глаз» почти всегда стоит баллов.</p>
+            <span class="tag">СОР / СОЧ</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">02</div>
+            <h3>Интервальное повторение</h3>
+            <p>Не зубри всё за один вечер. Повторяй по схеме <strong>1 — 3 — 7 — 14 дней</strong>: материал уходит в долгую память вместо того, чтобы испариться к утру.</p>
+            <span class="tag">Память</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">03</div>
+            <h3>Техника Фейнмана</h3>
+            <p>Объясни тему так, словно ребёнку. Где спотыкаешься на словах «theorem», «эмпирический» или «интеграл» — там и лежит дыра в понимании.</p>
+            <span class="tag">Понимание</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">04</div>
+            <h3>Глоссарий на трёх языках</h3>
+            <p>Веди тетрадь терминов: <strong>қазақша / русский / English</strong>. Когда тема даётся на английском, сначала выучи 10–15 ключевых слов — и текст перестаёт быть кашей.</p>
+            <span class="tag">Английский</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">05</div>
+            <h3>Конспект Cornell</h3>
+            <p>Раздели страницу: слева вопросы и ключевые слова, справа сам конспект, внизу 2–3 строки итога. Перед СОЧ просто читаешь левую колонку.</p>
+            <span class="tag">Конспекты</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">06</div>
+            <h3>Активное чтение учебника</h3>
+            <p>Читай с карандашом: вопрос к абзацу, подчёркивание одной фразой, пересказ вслух в конце. Пассивное «пролистывание» параграфа не считается.</p>
+            <span class="tag">Чтение</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">07</div>
+            <h3>Тетрадь ошибок</h3>
+            <p>Отдельная тетрадь: задание → моя ошибка → правильный ход. Перед экзаменом она ценнее учебника, потому что это твои личные слабые места.</p>
+            <span class="tag">Ошибки</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">08</div>
+            <h3>10 минут после урока</h3>
+            <p>Сразу после занятия пробегись по конспекту и ответь себе: «о чём было?». Домашка делается быстрее, а зубрёжка перед СОР почти не нужна.</p>
+            <span class="tag">Закрепление</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">09</div>
+            <h3>Сон вместо ночной зубрёжки</h3>
+            <p>Ночью перед работой мозг переписывает конспект в ноль. Выспавшись, ты вспомнишь больше, чем отсидевшись до трёх ночи.</p>
+            <span class="tag">Энергия</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIME -->
+    <section class="section section--alt" id="time">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Блок 2</span>
+          <h2>Тайм-менеджмент</h2>
+          <p>Время не появится само. Сначала — инструмент, потом — приёмы, с которыми четверть перестаёт быть кашей из дедлайнов.</p>
+        </div>
+
+        <div class="tools reveal">
+          <!-- POMODORO -->
+          <div class="tool">
+            <div class="tool__head">
+              <h3>Таймер «Помодоро»</h3>
+              <p>25 минут работы — 5 минут отдыха. После четырёх циклов — длинный перерыв 15–30 минут. Отлично заходит на подготовку к СОР.</p>
+            </div>
+
+            <div class="pomodoro">
+              <div class="pomodoro__modes" role="tablist">
+                <button class="chip is-active" data-mode="work">Фокус 25</button>
+                <button class="chip" data-mode="short">Перерыв 5</button>
+                <button class="chip" data-mode="long">Длинный 15</button>
+              </div>
+
+              <div class="timer" id="timer">
+                <svg viewBox="0 0 260 260" class="timer__svg" aria-hidden="true">
+                  <circle class="timer__track" cx="130" cy="130" r="110"></circle>
+                  <circle class="timer__ring" id="timerRing" cx="130" cy="130" r="110"></circle>
+                </svg>
+                <div class="timer__face">
+                  <div class="timer__time" id="timerTime">25:00</div>
+                  <div class="timer__label" id="timerLabel">Фокус</div>
+                </div>
+              </div>
+
+              <div class="pomodoro__controls">
+                <button class="btn btn--primary" id="timerStart">Старт</button>
+                <button class="btn btn--ghost" id="timerReset">Сброс</button>
+              </div>
+              <div class="pomodoro__rounds" id="timerRounds" aria-label="Выполнено циклов"></div>
+            </div>
+          </div>
+
+          <!-- EISENHOWER -->
+          <div class="tool">
+            <div class="tool__head">
+              <h3>Матрица Эйзенхауэра</h3>
+              <p>Разложи задачи по «важно» и «срочно» — и сразу видно, от чего бежать, а от чего вообще отказаться.</p>
+            </div>
+
+            <div class="matrix">
+              <div class="matrix__cell matrix__cell--do">
+                <span class="matrix__label">Срочно + Важно</span>
+                <strong>Делать сейчас</strong>
+                <p>СОР завтра, дедлайн проекта, ответ у доски.</p>
+              </div>
+              <div class="matrix__cell matrix__cell--plan">
+                <span class="matrix__label">Не срочно + Важно</span>
+                <strong>Планировать</strong>
+                <p>Подготовка к экзаменам, английский, олимпиада, спорт.</p>
+              </div>
+              <div class="matrix__cell matrix__cell--quick">
+                <span class="matrix__label">Срочно + Не важно</span>
+                <strong>Быстро и делегировать</strong>
+                <p>Чаты класса, мелкие поручения, «скинь конспект».</p>
+              </div>
+              <div class="matrix__cell matrix__cell--drop">
+                <span class="matrix__label">Не срочно + Не важно</span>
+                <strong>Убрать</strong>
+                <p>Бесконечная лента, «посмотрю одну серию».</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid--3 mt">
+          <article class="card reveal">
+            <div class="card__num">01</div>
+            <h3>Календарь четверти</h3>
+            <p>В начале четверти выпиши даты <strong>СОР, СОЧ, проектов и внутренних дедлайнов</strong> и разложи подготовку по неделям. Так ты не узнаёшь о трёх работах в один день.</p>
+            <span class="tag">Планирование</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">02</div>
+            <h3>Правило 1-3-5</h3>
+            <p>На день: <strong>1</strong> большая задача, <strong>3</strong> средних, <strong>5</strong> мелких. Больше этого список всё равно не вмещает — не ври себе.</p>
+            <span class="tag">План дня</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">03</div>
+            <h3>Съедай лягушку</h3>
+            <p>Первой делай самое неприятное — то, что откладываешь сильнее всего. Остальной день двигаешься на лёгкею, а не тащишь груз.</p>
+            <span class="tag">Прокрастинация</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">04</div>
+            <h3>Правило 2 минут</h3>
+            <p>Если дело занимает меньше двух минут — сделай сразу: записал дедлайн, ответил, сложил вещи. Иначе оно превратится в двадцать минут «надо бы».</p>
+            <span class="tag">Мелочи</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">05</div>
+            <h3>Таймбоксы</h3>
+            <p>Не список дел, а календарь: уроки, домашка, проект, спорт, отдых — у каждого свой блок времени. План без времени остаётся мечтой.</p>
+            <span class="tag">Блоки дня</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">06</div>
+            <h3>Планируй вечером</h3>
+            <p>5 минут перед сном: раскидай завтрашние задачи по блокам и собери рюкзак. Утром начинаешь с дела, а не с паники «где моя тетрадь».</p>
+            <span class="tag">Вечер</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRESS -->
+    <section class="section" id="stress">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Блок 3</span>
+          <h2>Стресс и равновесие</h2>
+          <p>НИШ — это марафон с тройной нагрузкой: три языка, проекты и экзамены. Техники ниже реально снижают напряжение, а не просто «расслабься».</p>
+        </div>
+
+        <div class="tools reveal">
+          <div class="tool">
+            <div class="tool__head">
+              <h3>Дыхание 4 — 7 — 8</h3>
+              <p>Самая быстрая «кнопка выключения» паники: вдох 4 секунды, задержка 7, выдох 8. Два-три цикла — и пульс замедляется.</p>
+            </div>
+
+            <div class="breath">
+              <div class="breath__stage" id="breathStage">
+                <div class="breath__circle" id="breathCircle"></div>
+                <div class="breath__text">
+                  <strong id="breathPhase">Готов?</strong>
+                  <span id="breathCount">Нажми старт</span>
+                </div>
+              </div>
+              <div class="breath__controls">
+                <button class="btn btn--primary" id="breathStart">Начать</button>
+                <div class="breath__cycles">Циклов: <span id="breathCycles">0</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__head">
+              <h3>Первая помощь перед СОР / СОЧ</h3>
+              <p>Когда сердце колотится, а в голове белый шум, действуй по шагам — по одному, без оценок.</p>
+            </div>
+            <ol class="steps">
+              <li><strong>Стоп и дыхание.</strong> Три цикла 4-7-8. Спокойствие не обязательно — просто сделай вдох.</li>
+              <li><strong>Упрости задачу.</strong> Это не «экзамен всей жизни», а один лист с несколькими вопросами.</li>
+              <li><strong>Повтори критерии.</strong> Ты знаешь, за что дают баллы — это твой маршрут, а не лотерея.</li>
+              <li><strong>Начни с простого.</strong> Первый выполненный пункт снимает ком в горле.</li>
+              <li><strong>Дай сроки вопросам.</strong> Не застревай: пометил, пошёл дальше, вернулся.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="grid grid--3 mt">
+          <article class="card reveal">
+            <div class="card__num">01</div>
+            <h3>Сон 8–10 часов</h3>
+            <p>Режим важнее длительности: ложись и вставай примерно в одно время. Именно во сне мозг превращает дневной хаос в знания.</p>
+            <span class="tag">Восстановление</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">02</div>
+            <h3>Движение каждый день</h3>
+            <p>30–60 минут: прогулка, велосипед, зал, танцы. Физическая нагрузка снижает кортизол надёжнее любого «расслабься».</p>
+            <span class="tag">Тело</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">03</div>
+            <h3>Цифровая пауза</h3>
+            <p>Час без ленты в день и телефон не в кровати. Соцсети не отдых — они сравнивают твою жизнь с отредактированным чужим видео.</p>
+            <span class="tag">Гаджеты</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">04</div>
+            <h3>Говори о тяжёлом</h3>
+            <p>Друг, родитель, школьный психолог — хоть кто-то. Тревога, высказанная вслух, обычно уменьшается вдвое.</p>
+            <span class="tag">Поддержка</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">05</div>
+            <h3>Микропаузы 5 минут</h3>
+            <p>Каждые 45–60 минут отрывайся от работы: вода, окно, потянуться. Пять минут отдыха сохраняют час продуктивности.</p>
+            <span class="tag">Перезагрузка</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">06</div>
+            <h3>Оценка — это фидбек</h3>
+            <p>В НИШ оценка ставится по дескриптору: она описывает, <strong>что именно</strong> получилось, а не «плохой ты». Уточни у учителя, что сделать, чтобы поднять уровень.</p>
+            <span class="tag">Отношение к себе</span>
+          </article>
+        </div>
+
+        <aside class="callout reveal">
+          <div class="callout__icon" aria-hidden="true">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.4A5.3 5.3 0 0 1 12 6.6a5.3 5.3 0 0 1 9.3 5C19.5 16.4 12 21 12 21Z"/></svg>
+          </div>
+          <div>
+            <h3>Если стало совсем тяжело</h3>
+            <p>
+              Это нормально — и это не слабость. Поговори с родителями, классным руководителем или школьным психологом.
+              Если нужен человек прямо сейчас — в Казахстане есть бесплатные анонимные линии:
+              <a href="tel:150"><strong>150</strong></a> — Национальная телефонная линия доверия для детей и молодёжи
+              (звонок бесплатный с любого мобильного, есть WhatsApp
+              <a href="https://wa.me/77081060810" target="_blank" rel="noopener">+7 708 106 08 10</a>)
+              и <a href="tel:111"><strong>111</strong></a> — единая линия поддержки, круглосуточно.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section class="section section--alt" id="resources">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Блок 4</span>
+          <h2>Полезные ресурсы</h2>
+          <p>От школы до поступления: официальные площадки НИШ, тренажёры ЕНТ, курсы и инструменты для домашки.</p>
+        </div>
+
+        <div class="filters reveal" id="resourceFilters">
+          <button class="chip is-active" data-filter="all">Все</button>
+          <button class="chip" data-filter="nis">НИШ</button>
+          <button class="chip" data-filter="ent">ЕНТ и КТА</button>
+          <button class="chip" data-filter="courses">Курсы</button>
+          <button class="chip" data-filter="tools">Инструменты</button>
+        </div>
+
+        <div class="grid grid--3" id="resourceGrid">
+          <a class="res reveal" data-cat="nis" href="https://www.nis.edu.kz/ru/" target="_blank" rel="noopener">
+            <span class="tag">НИШ</span>
+            <h3>nis.edu.kz</h3>
+            <p>Официальный сайт АОО «Назарбаев Интеллектуальные школы»: образовательная программа NIS-Programme, раздел «Ресурсы NIS», документы и новости.</p>
+          </a>
+
+          <a class="res reveal" data-cat="nis" href="https://bilimland.kz/ru" target="_blank" rel="noopener">
+            <span class="tag">НИШ</span>
+            <h3>Bilimland.kz</h3>
+            <p>Интерактивные уроки и виртуальная лаборатория на казахском, русском и английском. Ресурсы платформы используются во всех 21 школе НИШ.</p>
+          </a>
+
+          <a class="res reveal" data-cat="nis" href="https://www.cambridgeinternational.org/" target="_blank" rel="noopener">
+            <span class="tag">НИШ</span>
+            <h3>Cambridge International</h3>
+            <p>Официальный сайт партнёра НИШ: спецификации IGCSE и A-Level, past papers и материалы для международных экзаменов.</p>
+          </a>
+
+          <a class="res reveal" data-cat="ent" href="https://testcenter.kz/?lang=ru" target="_blank" rel="noopener">
+            <span class="tag">ЕНТ</span>
+            <h3>Тестовый центр (НЦТ РК)</h3>
+            <p>Официальный сайт национального центра тестирования: спецификации ЕНТ, пробные тесты, список 100 исторических дат, списки литературы и тематический анализ ошибок.</p>
+          </a>
+
+          <a class="res reveal" data-cat="ent" href="https://app.testcenter.kz/" target="_blank" rel="noopener">
+            <span class="tag">ЕНТ</span>
+            <h3>Личный кабинет ЕНТ</h3>
+            <p>Подача заявления на ЕНТ, выбор пункта и даты, результаты и апелляция. Есть приложение UTO.kz для телефона.</p>
+          </a>
+
+          <a class="res reveal" data-cat="ent" href="https://itest.kz/" target="_blank" rel="noopener">
+            <span class="tag">ЕНТ</span>
+            <h3>iTest.kz</h3>
+            <p>Тренажёр для подготовки к ЕНТ: тысячи вопросов на казахском и русском по каждому предмету, разбор ошибок.</p>
+          </a>
+
+          <a class="res reveal" data-cat="ent" href="https://nu.edu.kz/ru/admissions" target="_blank" rel="noopener">
+            <span class="tag">КТА</span>
+            <h3>Назарбаевский Университет</h3>
+            <p>Приёмная кампания НУ: требования, формат КТА и важные даты для тех, кто рассматривает поступление в НУ вместо ЕНТ-конкурса.</p>
+          </a>
+
+          <a class="res reveal" data-cat="courses" href="https://ru.khanacademy.org/" target="_blank" rel="noopener">
+            <span class="tag">Курсы</span>
+            <h3>Khan Academy</h3>
+            <p>Понятные объяснения и упражнения по математике, физике и экономике. Отлично, когда в классе что-то проскочили.</p>
+          </a>
+
+          <a class="res reveal" data-cat="courses" href="https://stepik.org/" target="_blank" rel="noopener">
+            <span class="tag">Курсы</span>
+            <h3>Stepik</h3>
+            <p>Бесплатные курсы по школьным предметам, языкам и программированию — короткие уроки с практикой.</p>
+          </a>
+
+          <a class="res reveal" data-cat="courses" href="https://learnenglish.britishcouncil.org/" target="_blank" rel="noopener">
+            <span class="tag">Курсы</span>
+            <h3>British Council: LearnEnglish</h3>
+            <p>Бесплатные задания на грамматику, лексику и аудирование от Британского совета — прямая тренировка английского для учёбы в НИШ.</p>
+          </a>
+
+          <a class="res reveal" data-cat="courses" href="https://www.coursera.org/" target="_blank" rel="noopener">
+            <span class="tag">Курсы</span>
+            <h3>Coursera</h3>
+            <p>Курсы университетов мира. Многие можно слушать бесплатно — хороший шаг, если школьная программа уже «в кармане».</p>
+          </a>
+
+          <a class="res reveal" data-cat="tools" href="https://www.wolframalpha.com/" target="_blank" rel="noopener">
+            <span class="tag">Инструменты</span>
+            <h3>Wolfram Alpha</h3>
+            <p>Считает уравнения, строит графики и показывает шаги решения. Проверяй себя, а не списывай готовый ответ.</p>
+          </a>
+
+          <a class="res reveal" data-cat="tools" href="https://www.desmos.com/calculator" target="_blank" rel="noopener">
+            <span class="tag">Инструменты</span>
+            <h3>Desmos</h3>
+            <p>Быстрый графический калькулятор: строит несколько функций сразу — идеально для алгебры и математического анализа.</p>
+          </a>
+
+          <a class="res reveal" data-cat="tools" href="https://gramota.ru/" target="_blank" rel="noopener">
+            <span class="tag">Инструменты</span>
+            <h3>Грамота.ру</h3>
+            <p>Справочные сервисы по русскому языку: орфография, морфология, живая речь. Проверяй написание и правила.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHECKLISTS -->
+    <section class="section" id="checklists">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Блок 5</span>
+          <h2>Чек-листы</h2>
+          <p>Отмечай прямо здесь — прогресс сохраняется в браузере. Начни с одного списка и доведи его до автоматизма.</p>
+        </div>
+
+        <div class="checklists" id="checklistRoot">
+
+          <div class="clist reveal" data-list="morning">
+            <div class="clist__head">
+              <h3>Утро перед школой</h3>
+              <div class="clist__meta"><span class="clist__count">0/6</span><button class="link-btn clist__reset">Сбросить</button></div>
+            </div>
+            <div class="clist__bar"><span></span></div>
+            <ul class="clist__items">
+              <li><label><input type="checkbox"><span>Завтрак и стакан воды</span></label></li>
+              <li><label><input type="checkbox"><span>Проверил рюкзак: тетради, книги, ручки, формульный блок</span></label></li>
+              <li><label><input type="checkbox"><span>Посмотрел расписание и замены</span></label></li>
+              <li><label><input type="checkbox"><span>Ноутбук/планшет заряжен, пароли на месте</span></label></li>
+              <li><label><input type="checkbox"><span>Домашка сдана (или записал, что не успел)</span></label></li>
+              <li><label><input type="checkbox"><span>Вышел с запасом 10 минут</span></label></li>
+            </ul>
+          </div>
+
+          <div class="clist reveal" data-list="evening">
+            <div class="clist__head">
+              <h3>Вечерний ритуал</h3>
+              <div class="clist__meta"><span class="clist__count">0/7</span><button class="link-btn clist__reset">Сбросить</button></div>
+            </div>
+            <div class="clist__bar"><span></span></div>
+            <ul class="clist__items">
+              <li><label><input type="checkbox"><span>Проверил дневник: всё записано?</span></label></li>
+              <li><label><input type="checkbox"><span>План на завтра по правилу 1-3-5</span></label></li>
+              <li><label><input type="checkbox"><span>Выписал дедлайны и работы, которые приближаются</span></label></li>
+              <li><label><input type="checkbox"><span>10 минут повторил тему сегодняшнего дня</span></label></li>
+              <li><label><input type="checkbox"><span>Собрал рюкзак и положил вещи на место</span></label></li>
+              <li><label><input type="checkbox"><span>Экраны выключены за 30–60 минут до сна</span></label></li>
+              <li><label><input type="checkbox"><span>Лёг в одно и то же время</span></label></li>
+            </ul>
+          </div>
+
+          <div class="clist reveal" data-list="exam">
+            <div class="clist__head">
+              <h3>Накануне СОР / СОЧ</h3>
+              <div class="clist__meta"><span class="clist__count">0/8</span><button class="link-btn clist__reset">Сбросить</button></div>
+            </div>
+            <div class="clist__bar"><span></span></div>
+            <ul class="clist__items">
+              <li><label><input type="checkbox"><span>Изучил критерии и дескрипторы оценивания</span></label></li>
+              <li><label><input type="checkbox"><span>Посмотрел примеры работ — понял, чего ждут</span></label></li>
+              <li><label><input type="checkbox"><span>Потренировался в формате заданий</span></label></li>
+              <li><label><input type="checkbox"><span>Повторил формулы, правила и ключевые термины</span></label></li>
+              <li><label><input type="checkbox"><span>Разобрал прошлые ошибки по теме</span></label></li>
+              <li><label><input type="checkbox"><span>Выспался (не зубри ночью)</span></label></li>
+              <li><label><input type="checkbox"><span>Собрал всё заранее: ручки, черновик, вода</span></label></li>
+              <li><label><input type="checkbox"><span>Вышел раньше и настроился спокойно</span></label></li>
+            </ul>
+          </div>
+
+          <div class="clist reveal" data-list="week">
+            <div class="clist__head">
+              <h3>План на неделю</h3>
+              <div class="clist__meta"><span class="clist__count">0/6</span><button class="link-btn clist__reset">Сбросить</button></div>
+            </div>
+            <div class="clist__bar"><span></span></div>
+            <ul class="clist__items">
+              <li><label><input type="checkbox"><span>Одна большая цель на неделю записана</span></label></li>
+              <li><label><input type="checkbox"><span>Проверил оценки и пропуски</span></label></li>
+              <li><label><input type="checkbox"><span>Запланировал спорт/прогулки ×3</span></label></li>
+              <li><label><input type="checkbox"><span>Выделил время на английский каждый день</span></label></li>
+              <li><label><input type="checkbox"><span>Забронировал вечер без гаджетов</span></label></li>
+              <li><label><input type="checkbox"><span>Оставил себе «ничегонеделание» — отдых часть плана</span></label></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="progress-summary reveal">
+          <div class="progress-summary__text">
+            <strong>Общий прогресс</strong>
+            <span id="overallCount">0 из 27 пунктов</span>
+          </div>
+          <div class="progress-summary__bar"><span id="overallBar"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Бонус</span>
+          <h2>Частые вопросы</h2>
+          <p>Ситуации, в которых кажется, что всё пропало. На деле всё решается конкретными шагами.</p>
+        </div>
+
+        <div class="faq reveal">
+          <details>
+            <summary>Не понимаю тему, а завтра СОР. Что делать?</summary>
+            <p>Порядок такой: перечитай конспект и критерии → открой урок по теме на Bilimland или видео → объясни вслух по методу Фейнмана → реши 3–5 задач из учебника → если дыра осталась, задай один конкретный вопрос учителю или однокласснику. За вечер реально закрыть одну тему, если не пытаться выучить всё подряд.</p>
+          </details>
+          <details>
+            <summary>Сколько времени нормально тратить на домашку?</summary>
+            <p>Однозначного норм нет. Рабочее правило: если задание не идёт дольше 15 минут — отметь его, сделай другое и вернись (или спроси). Гораздо важнее регулярность: 40–60 минут каждый день лучше, чем 5 часов в воскресенье перед целой неделей.</p>
+          </details>
+          <details>
+            <summary>Как успевать: академическая нагрузка, английский и проекты?</summary>
+            <p>День — это не список дел, а расписание блоков. Отведи время на учёбу, проекты, язык и отдых заранее, иначе они съедят друг друга. Правило 1-3-5 не даёт раздувать план, а 1–2 вечера в неделю оставляй полностью свободными.</p>
+          </details>
+          <details>
+            <summary>Откладываю дела до последнего. Как перестать?</summary>
+            <p>Уменьши первый шаг до абсурда: не «сделать проект», а «открыть тетрадь». Плюс правило 2 минут и таймер Помодоро — 25 минут считать проще, чем «всю работу». Мотивация обычно приходит уже в процессе, а не до него.</p>
+          </details>
+          <details>
+            <summary>Пропустил занятия и отстал. Как догнать?</summary>
+            <p>Составь список пропущенного по темам (возьми конспекты у одноклассников), выдели, что реально пригодится на ближайшей работе, и закрывай по одному пункту в день. Догонять всё сразу — верный способ бросить на середине.</p>
+          </details>
+          <details>
+            <summary>Когда начинать готовиться к ЕНТ?</summary>
+            <p>Знакомься с форматом заранее: это 120 заданий и 140 баллов за 4 часа — история Казахстана, грамотность чтения, математическая грамотность и два профильных предмета. На testcenter.kz лежат спецификации, списки литературы, пробные тесты и тематический анализ ошибок после каждой попытки. Практикуйся с таймером: сначала формат, потом скорость.</p>
+          </details>
+          <details>
+            <summary>Оценки — это же вообще не всё, да?</summary>
+            <p>Да. В НИШ оценка — это фидбек по дескриптору, а не характеристика тебя как человека. Ценятся способность разбираться, задавать вопросы, доводить до конца и восстанавливаться после неудач — всё это школа тренирует не хуже пятёрок.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="container reveal">
+        <h2>Ты справишься</h2>
+        <p>Не нужно применять всё сразу. Выбери один совет и один чек-лист — и продержись на них неделю. Через неделю добавь следующий.</p>
+        <a href="#checklists" class="btn btn--primary">Открыть чек-листы</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <span class="brand__mark">NIS</span>
+        <p>Student Survival Guide — путеводитель ученика НИШ: СОР и СОЧ, критериальное оценивание, ЕНТ и КТА, ресурсы и чек-листы.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="#study">Учёба</a>
+        <a href="#time">Время</a>
+        <a href="#stress">Стресс</a>
+        <a href="#resources">Ресурсы</a>
+        <a href="#checklists">Чек-листы</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <span>Учебный проект для учеников Назарбаевских интеллектуальных школ, Казахстан.</span>
+      <a href="#top">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
